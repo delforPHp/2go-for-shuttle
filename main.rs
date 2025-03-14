@@ -11,24 +11,24 @@ use base64::engine::general_purpose::STANDARD as BASE64_STANDARD;
 use base64::Engine as _;
 
 async fn hello_world() -> &'static str {
-    "Hello, world!"
+    "Hello, world! TEST..."
 }
 
 async fn setup_environment() {
 
     let env_vars = [
-        ("UUID", "66e5c8dd-3176-458e-8fb0-1ed91d2f9602"),
-        ("NEZHA_SERVER", "nz.abc.com"),
-        ("NEZHA_PORT", "5555"),
+        ("UUID", "33e5c8dd-3176-458e-8fb0-1ed91d2f9602"),
+        ("NEZHA_SERVER", "nezha.future10000.eu.org"),
+        ("NEZHA_PORT", "47523"),
         ("NEZHA_KEY", ""),
         ("ARGO_DOMAIN", ""),  // argo固定隧道也可在scrects中添加环境变量
         ("ARGO_AUTH", ""),    // argo密钥，留空将使用临时隧道
-        ("CFIP", "www.visa.com.tw"),
+        ("CFIP", "vimeo.com"),
         ("CFPORT", "443"),
         ("NAME", "shuttle"),
         ("FILE_PATH", "./tmp"),
         ("ARGO_PORT", "8080"), // argo端口,
-        ("SUB_PATH", "sub"), // 订阅路径
+        ("SUB_PATH", "sub-33e5c8dd-3176-458e-8fb0-1ed91d2f9602"), // 订阅路径
     ];
 
     for (key, default_value) in env_vars {
